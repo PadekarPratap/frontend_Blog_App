@@ -1,4 +1,4 @@
 
 
 
-export const server = 'http://localhost:8080/api/v1'
+export const server = 'https://nodejs-blog-app.onrender.com'
