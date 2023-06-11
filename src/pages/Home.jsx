@@ -47,7 +47,7 @@ const Home = () => {
        </div>
        <div className="my-12 text-center">
         <button disabled={page === 1} onClick={() => setPage(prev => prev - 1)} className="px-5 py-2 bg-[#555555] rounded-tl-full rounded-bl-full text-white border-r border-white disabled:opacity-60">&lt;</button>
-        <button disabled={page === Math.ceil(totalPosts / 8)} onClick={() => setPage(prev => prev + 1)} className="px-5 py-2 bg-[#555555] rounded-tr-full rounded-br-full text-white disabled:opacity-60">&gt;</button>
+        <button disabled={page === Math.floor((totalPosts + 8 - 1) / 8)} onClick={() => setPage(prev => prev + 1)} className="px-5 py-2 bg-[#555555] rounded-tr-full rounded-br-full text-white disabled:opacity-60">&gt;</button> {/* formula for calculation of last page:- Math.floor((totalRecords + recordsPerPage - 1) / recordsPerPage) */}
        </div>
     </div>
   )
